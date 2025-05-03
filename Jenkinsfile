@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh '''
                     . $VENV_DIR/bin/activate
-                    pytest --maxfail=1 --disable-warnings
+                    pytest --maxfail=1 --disable-warnings --tb=short tests/
                 '''
             }
         }
